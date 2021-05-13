@@ -23,4 +23,7 @@
     <string name="error_invalid_email">Invalid email</string>
     <string name="error_invalid_password">Invalid password</string>
     <string name="error_field_required">Requiered Field</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="user_name">Name</string>
+    <string name="user_lastname">Last Name</string>
 </resources>

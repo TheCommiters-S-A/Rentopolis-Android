@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import edu.eci.ieti.rentopolis.NavigationDrawer;
 import edu.eci.ieti.rentopolis.R;
+import edu.eci.ieti.rentopolis.Register;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
     private EditText emailView;
     private EditText passwordView;
+    private TextView signUpView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.login);
         mAuth = FirebaseAuth.getInstance();
 
+    }
+
+    public void onSignUp(View view){
+        startActivity( new Intent(LoginActivity.this, Register.class));
+        finish();
     }
 
     public void onLogin(View view){
